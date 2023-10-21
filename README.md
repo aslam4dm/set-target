@@ -15,23 +15,26 @@ export trgt2
 export trgt3
 ```
 
-Make the script executable and store it in the /bin directory
+Next, make the set-target script executable and save it to the /bin directory
 
 `sudo chmod +x set-target.py`
 `sudo cp ./set-target.py /bin/set-target`
 
-usage: 
+usage example:
+```
 set-target trgtdc 10.10.10.10
+```
+```
 set-target trgt1 192.168.45.101
-etc.
-
+```
 
 ### Update-target
-save the following command to a file called 'update-target'
-`source /home/kali/.zshrc`
+to update the targets in the existing/current session, run the command 
+```
+source /home/{user}/.zshrc
+```
 
-sudo cp update-target /bin/update-target
-sudo chmod +x /bin/update-target
+Alternatively, any new session opened, that loads the rc profile will update automatically.
 
 
 ### View-target
