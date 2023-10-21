@@ -41,7 +41,11 @@ Alternatively, any new session opened, that loads the rc profile will update aut
 save the following command to a file called 'get-target'
 `env | grep trgt`
 
-`sudo cp view-target /bin/get-target`
-`sudo chmod +x /bin/get-target`
+```
+sudo cp view-target /bin/get-target
+```
+```
+sudo chmod +x /bin/get-target
+```
 
 
