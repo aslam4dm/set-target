@@ -1,7 +1,7 @@
 ### Set-target:
 Note, you must be able to execute commands as root with sudo to modify .zshrc or .bashrc file.
 
-To begin, you must first have the following variables declared and exported in your .zshrc file like so:
+To begin, you must first have the following variables declared and exported in your .zshrc file (this should be at `/home/<username/.zshrc>`) like so:
 
 ```
 trgtdc=X
