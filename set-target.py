@@ -16,12 +16,11 @@ try:
 
         TRGT_IP = sys.argv[2]
 
-        with open('/home/kali/.zshrc') as f:
+        with open(f'/home/{os.getlogin()}/.zshrc') as f:
             for l in f.readlines():
                 if TRGT_REPLACE in l and '=' in l:
                     old_ip = l.split('=')[1].strip('\n')
-                    os.system("sudo sed -i 's/{}={}/{}={}/g' /home/kali/.zshrc".format(TRGT_REPLACE,
-                              old_ip, TRGT_REPLACE, TRGT_IP))
+                    os.system(f"sudo sed -i 's/{TRGT_REPLACE}={old_ip}/{TRGT_REPLACE}={TRGT_IP}/g' /home/{os.getlogin()}/.zshrc")
                     print ('{}: {} --> {}'.format(TRGT_REPLACE, old_ip,
                             TRGT_IP))
                     exit()
